@@ -1,7 +1,7 @@
 # key_LineNotice
 M5Stackを使用して鍵の閉め忘れをLINEに通知してくれるシステムです。
 
-## What to need to use
+## what you need to use it
 * M5Stack
 * 磁気ドアスイッチx2
 * LED
@@ -13,4 +13,4 @@ key_LineNotice.inoの5,6,8行目にwifiのIDとPassword、発行したLINEtoken�
 M5Stackの16番pinに鍵用の磁気スイッチ、2番pinに鍵用の磁気スイッチ、5番pinにLEDを接続してください。
 詳しくは下記の記事を参考にしてください。
 
-解説記事-> ~["【M5Stack】鍵の閉め忘れをLINEに通知するシステム"]~　_執筆中_
+解説記事-> ~"[【M5Stack】鍵の閉め忘れをLINEに通知するシステム]"~　_準備中_
