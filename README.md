@@ -1,7 +1,7 @@
-# key_LineNotice
+# key_LineNotice v1.0
 M5Stackを使用して鍵の閉め忘れをLINEで通知するシステムです。
 
-## what you need to use it
+## what you need
 * M5Stack
 * 磁気ドアスイッチx2
 * LED
