@@ -5,6 +5,7 @@
 When this code write to M5Stick, remove GND pin from M5Stick.
 Then Err won't occurred
 */
+//LED of M5StickC voltage is opposite to M5Stack
 const char* ssid     = "";//<-wifi ssid
 const char* password = "";//<- wifi password
 const char* host     = "notify-api.line.me";
@@ -13,7 +14,7 @@ const char* token    = "";//<- LineNotice Token
 #define LED_PIN 10
 #define DOOR_PIN 26
 #define KEY_PIN 0
-#define KEY_TIME 3
+#define KEY_TIME 30
 
 boolean line_notify(String msg) {
   WiFiClientSecure client;
@@ -54,14 +55,14 @@ void setup() {
 void loop(){
     M5.update();
     if(digitalRead(KEY_PIN)==1){
-        digitalWrite(LED_PIN, HIGH);
+        digitalWrite(LED_PIN, LOW);
         M5.Lcd.fillScreen(GREEN);
         M5.Lcd.setCursor(10,40);
         M5.Lcd.setTextColor(BLACK);
         M5.Lcd.setTextSize(5);
         M5.Lcd.print("Unlock");
     }else{
-        digitalWrite(LED_PIN, LOW);
+        digitalWrite(LED_PIN, HIGH);
         M5.Lcd.fillScreen(BLACK);
         M5.Lcd.setCursor(10,40);
         M5.Lcd.setTextColor(WHITE);
@@ -89,7 +90,7 @@ void loop(){
         int seccount=0;
         while(seccount<KEY_TIME){
             if(digitalRead(KEY_PIN)==0){
-                digitalWrite(LED_PIN, LOW);
+                digitalWrite(LED_PIN, HIGH);
                 M5.Lcd.fillRect(0,0,320,120,BLACK);
                 M5.Lcd.setCursor(10,40);
                 M5.Lcd.setTextColor(WHITE);
