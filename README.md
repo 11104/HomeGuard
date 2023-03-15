@@ -8,7 +8,7 @@ M5Stackを使用して鍵の閉め忘れをLINEで通知するシステムです
 * [LINE Notify](https://notify-bot.line.me/ja/)のToken
 
 ## How to use
-M5Stackでは"[stack_homeguard.ino](https://github.com/11104/key_LineNotice/blob/main/stack_homeguard/stack_homeguard.ino)"、M5StickC Plusでは"[stick_homeguard.ino](https://github.com/11104/key_LineNotice/blob/main/stick_homeguard/stick_homeguard.ino)"を使用します。
+M5Stackでは"[stack_homeguard.ino](https://github.com/11104/HomeGuard/blob/main/stack_homeguard/stack_homeguard.ino)"、M5StickC Plusでは"[stick_homeguard.ino](https://github.com/11104/HomeGuard/blob/main/stick_homeguard/stick_homeguard.ino)"を使用します。
 
 key_LineNotice.inoの5,6,8行目にwifiのIDとPassword、発行したLINE Notify tokenを入力して、M5Stackに書き込んで下さい。
 13行目ではドアを閉じてから何秒後に通知を送るのかを変更できます。(デフォルトでは30秒)
