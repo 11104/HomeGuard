@@ -14,7 +14,7 @@ const char* token    = "";//<- LineNotice Token
 #define LED_PIN 10
 #define DOOR_PIN 26
 #define KEY_PIN 0
-#define KEY_TIME 30
+#define KEY_TIME 30 //<- Time to notify to LINE Notice (default: 30 seconds)
 
 boolean line_notify(String msg) {
   WiFiClientSecure client;
